@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap');
+
+body {
+	font-family: 'Zen Antique Soft', serif;
+	color: rgb(36, 36, 36);
+	background-image:url("img/Wallpaper-Windows-11.png");
+	background-size:cover;
+	background-repeat: no-repeat;
+}
+
+.container {
+	/* margin: 20px 80px; */
+	/* border: 5px solid #333; */
+	box-sizing: border-box;
+	display: grid;
+	grid-template-areas:
+		'profile '
+		'project '
+		'message '
+		'followMe';
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+}
+
+.project,.profile,.followMe,.message{
+	background: rgba(180, 203, 218, 0.4);
+	backdrop-filter: blur( 6px );
+	-webkit-backdrop-filter: blur( 6px );
+	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+}
+
+/* profile */
+
+.profile {
+	grid-area: profile;
+	display: flex;
+	flex-direction: column;
+	margin: 6px;
+	border-radius: 10px;
+}
+
+.background {
+	width: auto;
+	height: 100px;
+	background-image: url(img/benner.png);
+	background-position: center;
+	background-size: cover;
+	border-radius: 10px 10px 0 0;
+}
+
+.picture {
+	width: 80px;
+	height: 80px;
+	background-image: url(img/priyaihsan.jpg);
+	background-position: center;
+	background-size: cover;
+	border-radius: 50%;
+	border: 7px solid hsl(201, 100%, 90%);
+	margin-top: -50px;
+	margin-left: 10%;
+}
+
+.title,
+.about,
+.education,
+.experience,
+.skill {
+	margin: 5px 20px;
+}
+
+h3,
+p {
+	margin: 7px 0;
+}
+
+
+
+/* end profile */
+
+.project {
+	grid-area: project;
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+	margin: 6px;
+}
+
+/* follow me */
+.followMe {
+	grid-area: followMe;
+	display: flex;
+	flex-direction: column;
+    margin: 6px;
+	border-radius: 10px;
+}
+
+.social-media {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 2px;
+}
+
+.clock {
+	height: 100px;
+	background-image: url(img/banner-time.png);
+	background-position: center;
+	background-size: cover;
+	color: white;
+}
+
+.time-date,
+.time-clock {
+	margin-left: 20px;
+}
+
+.time-date {
+	margin-top: 30px;
+	margin-bottom: 0;
+}
+
+.time-clock {
+	font-size: 20px;
+}
+
+.footer {
+	font-size: 14px;
+	color: rgb(36, 36, 36);
+	margin: 10px auto;
+}
+
+/* end follow me */
+
+/* project card */
+
+.card-project {
+	max-height: 418px;
+	border-radius: 0 0 10px 10px;
+	overflow-y: auto;
+	direction: ltr;
+	scrollbar-width: thin;
+}
+
+.card-project::-webkit-scrollbar {
+	width: 20px;
+	border-radius: 0 0 10px 0;
+}
+
+.card-project::-webkit-scrollbar-track {
+	scroll-padding: 10px;
+	border-radius: 0 0 10px 0;
+}
+
+.card-project::-webkit-scrollbar-thumb {
+	border: 5px solid transparent;
+	background-clip: content-box;
+	background-color: rgb(65, 155, 197);
+	border-radius: 10px;
+}
+
+.project-value {
+	background-color: hsl(201, 100%, 90%);
+	border-radius: 10px 0 0 10px;
+	margin: 10px;
+}
+
+.flex {
+	display: grid;
+	grid-template-areas:
+		'box-image text-project'
+		'box-image text-project'
+		'box-image text-project';
+	grid-template-columns: 0.5fr 1fr;
+	grid-template-rows: 0.5fr 1fr;
+}
+.box-image {
+	grid-area: box-image;
+	display: flex;
+}
+
+.image-project {
+	background-image: url(https://i.pinimg.com/564x/ec/a6/86/eca686df57b2baf94cb2933f9aa873cd.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 10px 0 0 10px;
+	width: 200px;
+	height: 100%;
+}
+
+.box-shadow {
+	margin-left: -80px;
+	width: 80px;
+	height: 100%;
+	background-image: linear-gradient(to right, rgba(255, 255, 255, 0), hsl(201, 100%, 90%));
+}
+
+.text-project {
+	grid-area: text-project;
+	margin-left: -10px;
+}
+/* end project */
+/* message */
+
+.message {
+	grid-area: message;
+	display: flex;
+	flex-direction: column;
+	margin: 6px;
+	border-radius: 10px;
+}
+
+.card-message {
+	max-height: 639px;
+	border-radius: 0 0 10px 10px;
+	overflow-y: auto;
+	direction: ltr;
+	scrollbar-width: thin;
+}
+
+.card-message::-webkit-scrollbar {
+	width: 20px;
+	border-radius: 0 0 10px 0;
+}
+
+.card-message::-webkit-scrollbar-track {
+	scroll-padding: 10px;
+	background-color: #e7e7e796;
+	border-radius: 0 0 10px 0;
+}
+
+.card-message::-webkit-scrollbar-thumb {
+	border: 5px solid transparent;
+	background-clip: content-box;
+	background-color: #8070d4;
+	border-radius: 10px;
+}
+
+.message-value {
+	padding-bottom: 8px;
+	margin: 10px;
+}
+
+.name-message {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.letter-message {
+	font-size: 14px;
+	word-wrap: break-word;
+}
+
+.date-message {
+	margin-top: 3px;
+	padding: 0;
+	font-size: 12px;
+	color: rgba(0, 0, 0, 0.726);
+}
+
+.message-box {
+	padding: 10px;
+	background-color: hsl(201, 100%, 90%);
+	border-radius: 20px 20px 20px 0;
+}
+
+.daftar {
+	width: 150px;
+	height: 40px;
+	border-radius: 12px;
+	border: none;
+	margin-right: 17px;
+	background: hsl(201, 100%, 90%);
+}
+
+.kesamping {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+
+
+/*%%%%%%%%%%%%%%%%%%% destop view %%%%%%%%%%%%%%%%*/
+@media (min-width: 1025px) {
+
+	.container {
+		margin: 20px 80px;
+		/* border: 5px solid #333; */
+		box-sizing: border-box;
+		display: grid;
+		grid-template-areas:
+			'profile project message'
+			'profile project message'
+			'profile followMe message';
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 0.5fr;
+	}
+}
